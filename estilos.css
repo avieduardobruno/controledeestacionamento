@@ -1,0 +1,52 @@
+/* a folha de estilos contém "classes" que contemplam propriedades, as quais irão definir
+   os atributos de design do HTML.
+   Há classes nativas, isto é, que se referenciam a TAGS HTML padrões, mas você pode
+   criar suas próprias classes com as propriedades e atributos que achar melhor.
+   Há também a possibilidade de crair grupos de classe, onde vocÊ pode definir
+   o comportamento de uma série de TAGS HTML em determinado ponto do HTML ou 
+   alguma ação específica adotada no HTML em um momento, tal como mudar a cor de
+   um label para mostrar uma mensagem.
+*/
+
+body { /* se refere a Tag Body do HTML */
+    font-family: Arial, sans-serif; /* definição do fonte */
+    margin: 20px;                   /* definição da margem */
+}
+
+h1 {
+    color: #333; /* definição da cor */
+}
+
+form {
+    width: 300px; /* definição da largura */
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] { /* quando o tipo do INPUT for "text" vai se comportar desta forma */
+    width: 100%;
+    padding: 8px; /* define espaçamento da janela em relaçao as demais janelas */
+    margin-bottom: 10px; /* define o espaçamento vertical em relação ao rodapé */
+}
+
+button {
+    background-color: #007bff; /* cor de fundo: aqui poderíamos colocar uma url
+                                    de uma imagem de fundo */
+    background:local (url:)                                
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}

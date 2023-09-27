@@ -1,0 +1,108 @@
+<!DOCTYPE html>  <!-- essa  cláusula é obrigatória segundo o W3C wwwConsortium
+                      que é o orgão regulador da internet mundial -->
+<html lang="pt-br"> <!-- lang define a linguagem da página : padrão = "en"-->
+<head>
+    <!-- O head contém elemtentos de configuração do HTML e os 
+         caminhos para arquivos de Estilos(CSS), imagens, scripts em JavaScript e
+         outros 
+    -->
+    <meta charset="UTF-8"> <!-- outra opção seria o ISO-88591. São os conjuntos de
+                                de caracteres que a página irá aceitar. Isso influencia
+                                em acentuação e mostragem de caracteres especiais
+                           -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estacionamento</title> <!-- titulo da página que aparece 
+                                                   no "label" do navegador quando a página
+                                                   está aberta-->
+    <link rel="stylesheet" href="estilos.css"> <!-- folha de estilos que serve para "decorar"
+                                                  e posicionar elementos do HTML -->
+</head>
+
+<body> <!-- corpo do HTML -->
+    <header> <!-- cabeçaho da página -->
+        <h1>Controle de Estacionamento</h1> <!-- header padrão variando de H1 a H6 
+                                                 quanto menor o número maior o fonte -->
+        <nav> <!-- cria um menu -->
+            <ul> <!-- abre uma aba de menu -->
+                <li><a href="#cadastro">Cadastro de Reserva</a></li> <!-- aqui estão as opções
+                                                                          do menu-->
+                <li><a href="#listar">Listar Vagas</a></li> <!-- o "#" indica um "parágrafo"
+                                                                 que irá se traduzir em uma
+                                                                 section onde para onde o fluxo
+                                                                 vai ser direcionado. Nesse 
+                                                                case temos uma section, mas 
+                                                                geralmente temos um tag <a href
+                                                                para direcionar para uma outra 
+                                                                página do projeto que pode ser
+                                                                um HTML, ou JSP e etc -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main> <!-- aqui temos uma área principal e em seguida a "Section" onde surgirá
+                a tela de cadastro de reservas, seguida da "section" que irá chamar o
+                JavaScript para listar as vagasem aberto -->
+        <section id="cadastro">
+            <h2>Cadastro de Reserva</h2>
+            <form id="cadastro-form"> <!-- esta tag define um "FORM"/formulário de
+                                           preenchimento de dados. Associado a este
+                                           form temos metódos POST e GET para enviar
+                                           informações adiante (postar) ou GET para 
+                                           receber informações provindas, por exemplo,
+                                           de uma API de consulta de CEP-->
+                <label for="placa">Placa do Veículo:</label>
+                <input type="text" id="placa" required><br> <!-- esta é a tag responsável por
+                                                                 "criar" uma janela da tela.
+                                                                  Existe um mundo enorme de opções
+                                                                  de tipos e parametrizações que
+                                                                  podem ser utilizadas aqui-->
+
+                <label for="proprietario">Nome do Proprietário:</label>
+                <input type="text" id="proprietario" required><br>
+
+                <label for="apartamento">Número do Apartamento:</label>
+                <input type="text" id="apartamento" required><br>
+
+                <label for="bloco">Bloco do Apartamento:</label>
+                <input type="text" id="bloco" required><br>
+
+                <label for="modelo">Modelo do Veículo:</label>
+                <input type="text" id="modelo" required><br>
+
+                <label for="cor">Cor do Veículo:</label>
+                <input type="text" id="cor" required><br>
+
+                <label for="vaga">Número da Vaga:</label>
+                <input type="text" id="vaga" required><br>
+
+                <button type="submit">Salvar</button> <!-- a TAG Button "cria" um botão na tela
+                                                           com o título especificado entre ">" e "<".
+                                                           Como o type é "submit", o HTML irá procurar
+                                                           o "Form" e irá postar os dados.
+                                                           Há também o Type Reset que limpa as 
+                                                           janelas do formulário-->
+            </form>
+        </section>
+        
+        <section id="listar">
+            <h2>Listar Vagas</h2>
+            <ul id="vagas-list"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script> <!-- essa é uma declaração que permite que o servidor
+                                           execute o script em Javascript-->
+</body>
+</html>
+<!-- Vale sempre lembrar algumas coisas:
+1 - Uma vez que o HTML é aberto no navegador ou há alguma ação sobre ele, o mesmo
+    sempre é lido como um texto, e TODAS as tags, apontamentos de local de arquivos,
+    script e tudo mais que houver é executado top -> down
+2 - O HTML e o CSS não são linguagens de programação, mas de FORMATAÇÃO.
+    Portanto, você não PROGRAMA em HTML ou CSS, mas ESCREVE em HTML ou CSS.
+    Já o JavaScript é sim uma linguagem de programação.
+3 - Comparando com o corpo humano, o HTML seria um corpo sem roupa e sem vida. O CSS
+    O CSS permite colocar a roupa, e deixar essa pessoa impecável.
+    O JavaScript irá permitir que ela se movimente, fale... enfim, haja como
+    uam pessoa normal.
+-->
